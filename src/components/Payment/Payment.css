@@ -1,0 +1,75 @@
+/* Overlay */
+.payment-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Payment box */
+.payment-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.payment-box h2 {
+  margin-bottom: 15px;
+}
+
+.payment-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.payment-items li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.total {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.payment-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cancel-btn, .pay-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #ccc;
+}
+
+.cancel-btn:hover {
+  background: #aaa;
+}
+
+.pay-btn {
+  background: #28a745;
+  color: white;
+}
+
+.pay-btn:hover {
+  background: #218838;
+}

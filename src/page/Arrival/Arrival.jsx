@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Arrival.css"
 import shortImage from "../../assets/image1-removebg-preview.png"
-function Arrival() {
+function Arrival({onShopNow}) {
   return (
     <div>
  <div className="arrival-section" id="arrival">
@@ -12,7 +12,7 @@ function Arrival() {
           <h4>#New Summer Collection 2025</h4>
           <h2>NEW CLOTHES</h2>
            <div className="btn">
-          <button>SHOP NOW</button>
+          <button onClick={onShopNow}>SHOP NOW</button>
         </div>
         </div>
        
