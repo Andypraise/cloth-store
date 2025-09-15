@@ -5,6 +5,7 @@ import Home from "./page/Home/Home";
 import Shop from "./page/Shop/Shop";
 import Rated from "./page/Rated/Rated";
 import Arrival from "./page/Arrival/Arrival";
+
 import Footer from "./components/Footer/Footer";
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Shop />
       <Rated />
       <Arrival />
+    
       <Footer />
     </div>
   );
