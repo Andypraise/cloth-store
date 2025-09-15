@@ -1,0 +1,137 @@
+.arrival-section {
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+.arrival-feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  flex-direction: column;
+}
+.arrival-feature h2 {
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.arrival-feature h4 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.arrival-img img {
+  width: 35vw;
+  height: 47vh;
+  
+}
+@media(max-width:991px){
+    .arrival-feature h2{
+        font-size: 37px;
+    }
+    .arrivalhome-img img{
+        height: 50vh;
+    }
+}
+@media(max-width:850px){
+    .harrival-feature h2{
+        font-size: 35px;
+    }
+    .arrival-img img{
+        height: 50vh;
+    }
+}
+@media(max-width:768px){
+  .arrival-section{
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+align-items: center;
+        padding: 20px;
+}
+.arrival-feature{
+    width: 80%;
+    padding-top: 30px;
+}
+.arrival-feature h2{
+    font-size: 35px;
+}
+.arrival-feature h4{
+    font-size: 17px;
+}
+.arrival-img img{
+    width: 78vw;
+    height: 45vh;
+}
+}
+@media(max-width:645px){
+.arrival-section{
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+         align-items: center;
+        padding: 20px;
+}
+.arrival-feature{
+    width: 80%;
+    padding-top: 30px;
+}
+.home-feature h2{
+    font-size: 35px;
+}
+.arrival-feature h4{
+    font-size: 17px;
+}
+.arrival-img img{
+    width: 78vw;
+    height: 45vh;
+}
+}
+@media(max-width:545px){
+.arrival-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        padding: 20px;
+}
+.arrival-feature{
+    width: 80%;
+    padding-top: 30px;
+}
+.arrival-feature h2{
+    font-size: 30px;
+}
+.arrival-feature h4{
+    font-size: 15px;
+}
+.arrival-img img{
+    width: 75vw;
+    height: 45vh;
+}
+}
+@media(max-width:400px){
+.arrival-section{
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        
+}
+.arrival-feature{
+    width: 80%;
+    padding-top: 30px;
+}
+.arrival-feature h2{
+    font-size: 25px;
+}
+.arrival-feature h4{
+    font-size: 12px;
+}
+.arrival-img img{
+    width: 75vw;
+    height: 40vh;
+}
+}

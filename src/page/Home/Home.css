@@ -1,0 +1,151 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+.home-feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  flex-direction: column;
+}
+.home-feature h2 {
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.home-feature h4 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.home-img img {
+  width: 50vw;
+  height: 65vh;
+}
+.btn{
+    margin-top: 25px;
+}
+.btn button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.btn button:hover{
+    background-color: rgba(0, 0, 0, 0.61);
+}
+@media(max-width:991px){
+    .home-feature h2{
+        font-size: 37px;
+    }
+    .home-img img{
+        height: 50vh;
+    }
+}
+@media(max-width:850px){
+    .home-feature h2{
+        font-size: 35px;
+    }
+    .home-img img{
+        height: 50vh;
+    }
+}
+@media(max-width:768px){
+  .home-section{
+    display: flex;
+    flex-direction: column-reverse;
+        justify-content: center;
+align-items: center;
+        padding: 20px;
+}
+.home-feature{
+    width: 80%;
+    padding-top: 30px;
+}
+.home-feature h2{
+    font-size: 35px;
+}
+.home-feature h4{
+    font-size: 17px;
+}
+.home-img img{
+    width: 78vw;
+    height: 45vh;
+}
+}
+@media(max-width:645px){
+.home-section{
+    display: flex;
+    flex-direction: column-reverse;
+        justify-content: center;
+         align-items: center;
+        padding: 20px;
+}
+.home-feature{
+    width: 80%;
+    padding-top: 30px;
+}
+.home-feature h2{
+    font-size: 35px;
+}
+.home-feature h4{
+    font-size: 17px;
+}
+.home-img img{
+    width: 78vw;
+    height: 45vh;
+}
+}
+@media(max-width:545px){
+.home-section{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+        padding: 20px;
+}
+.home-feature{
+    width: 100%;
+    padding-top: 30px;
+}
+.home-feature h2{
+    font-size: 20px;
+}
+.home-feature h4{
+    font-size: 15px;
+}
+.home-img img{
+    width: 75vw;
+    height: 45vh;
+}
+}
+@media(max-width:400px){
+.home-section{
+    display: flex;
+    flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        
+}
+.home-feature{
+    width: 100%;
+    padding-top: 30px;
+}
+.home-feature h2{
+    font-size: 20px;
+}
+.home-feature h4{
+    font-size: 12px;
+}
+.home-img img{
+    width: 75vw;
+    height: 40vh;
+}
+}
