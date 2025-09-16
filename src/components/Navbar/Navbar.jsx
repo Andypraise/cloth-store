@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import Products from "../../data/Products"; // 👈 your products
+import Products from "../../data/Products";
 import searchImage from "../../assets/image13.png";
 import cartImage from "../../assets/image11.png";
 
@@ -9,6 +9,7 @@ function Navbar() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [cart, setCart] = useState([]);
+  const [isOpen, setIsOpen] = useState(false); // 👈 hamburger menu state
 
   const handleSearch = () => {
     const filtered = Products.filter((item) =>
@@ -18,42 +19,48 @@ function Navbar() {
   };
 
   const addToCart = (item) => {
-    setCart([...cart, item]); // add product to cart
+    setCart([...cart, item]);
     alert(`${item.name} added to cart!`);
   };
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <div className="logo">
-          <h1>SHOPMORE</h1>
-        </div>
+    <>
+      <nav className="navbar">
+        <div className="nav-container">
+          {/* Hamburger (mobile only) */}
+          <div className="hamburger" onClick={() => setIsOpen(true)}>
+            ☰
+          </div>
 
-        <ul className="nav-menu">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#shop">SHOP</a></li>
-          <li><a href="#rated">RATED</a></li>
-          <li><a href="#new">NEW ARRIVALS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
+          <div className="logo">
+            <h1>SHOPMORE</h1>
+          </div>
 
-        <div className="nav-img">
-          {/* 👇 toggle search input */}
-          <img
-            onClick={() => setShowSearch(!showSearch)}
-            src={searchImage}
-            alt="search"
-            width="20px"
-          />
-          {/* 👇 cart icon shows number of items */}
-          <div className="cart-icon">
-            <img src={cartImage} alt="cart" width="20px" />
-            {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
+          {/* Desktop Menu */}
+          <ul className="nav-menu">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#rated">RATED</a></li>
+            <li><a href="#new">NEW ARRIVALS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+
+          <div className="nav-img">
+            <img
+              onClick={() => setShowSearch(!showSearch)}
+              src={searchImage}
+              alt="search"
+              width="20px"
+            />
+            <div className="cart-icon">
+              <img src={cartImage} alt="cart" width="20px" />
+              {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
 
-      {/* 👇 search input in navbar */}
+      {/* Search input */}
       {showSearch && (
         <div className="nav-search">
           <input
@@ -66,7 +73,7 @@ function Navbar() {
         </div>
       )}
 
-      {/* 👇 search results with add-to-cart */}
+      {/* Search results */}
       {results.length > 0 && (
         <div className="search-dropdown">
           {results.map((item) => (
@@ -80,7 +87,19 @@ function Navbar() {
           ))}
         </div>
       )}
-    </nav>
+
+      {/* Sidebar menu (mobile) */}
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+        <button className="close-btn" onClick={() => setIsOpen(false)}>×</button>
+        <ul>
+          <li><a href="#home" onClick={() => setIsOpen(false)}>HOME</a></li>
+          <li><a href="#shop" onClick={() => setIsOpen(false)}>SHOP</a></li>
+          <li><a href="#rated" onClick={() => setIsOpen(false)}>RATED</a></li>
+          <li><a href="#new" onClick={() => setIsOpen(false)}>NEW ARRIVALS</a></li>
+          <li><a href="#contact" onClick={() => setIsOpen(false)}>CONTACT</a></li>
+        </ul>
+      </div>
+    </>
   );
 }
 

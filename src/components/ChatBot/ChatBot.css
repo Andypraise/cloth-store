@@ -49,6 +49,7 @@
     background: transparent;
     cursor: pointer;
     color: white;
+    transition: all .3s ease;
 }
 .chat-header button:hover{
     background: rgba(197, 195, 195, 0.473);
