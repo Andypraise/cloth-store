@@ -9,6 +9,7 @@ import ladyImage from "../../assets/image8.png";
 import senateImage from "../../assets/image16.png";
 import jackImage from "../../assets/image18.png";
 import dressImage from "../../assets/image19.png";
+
 import boyImage from "../../assets/image20.png";
 function Shop() {
   return (

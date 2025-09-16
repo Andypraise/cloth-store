@@ -4,7 +4,6 @@ import SliderCard from "../../components/SliderCard/SliderCard";
 import senateImage from "../../assets/image16.png";
 import senImage from "../../assets/image21.png";
 import whiteImage from "../../assets/image22.png";
-
 function Rated() {
   return (
     <div>
