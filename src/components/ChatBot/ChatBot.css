@@ -46,7 +46,12 @@
     height: 25px;
     border: none;
     outline: none;
+    background: transparent;
     cursor: pointer;
+    color: white;
+}
+.chat-header button:hover{
+    background: rgba(197, 195, 195, 0.473);
 }
 
 .chat-messages {
