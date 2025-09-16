@@ -1,10 +1,12 @@
 import React from "react";
 import "./Home.css";
 import clothImage from "../../assets/image2-removebg-preview.png";
+import PromoBanner from "../../components/PromoBanner/PromoBanner";
 
 function Home({ onShopNow }) {
   return (
     <div>
+        <PromoBanner />
       <div className="home-section" id="home">
         <div className="home-img">
           <img src={clothImage} alt="Cloth" />
