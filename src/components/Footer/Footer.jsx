@@ -4,9 +4,11 @@ import footerImage from "../../assets/image3.png";
 import locateImage from "../../assets/image15.png";
 import mailImage from "../../assets/image12.png";
 import phoneImage from "../../assets/image14.png";
+import FooterAds from "./FooterAds";
 function Footer() {
   return (
     <div>
+       <FooterAds />
       <div className="footer-link">
         <div className="footer-img">
           <h4>PROMO</h4>
