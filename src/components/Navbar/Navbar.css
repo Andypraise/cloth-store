@@ -4,12 +4,11 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins',sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .navbar {
   width: 100%;
-  background: #FFFFFF;
- 
+  background: #ffffff;
 }
 .nav-container {
   display: flex;
@@ -17,14 +16,14 @@ body {
   align-items: center;
   padding: 20px;
 }
-.logo{
-    border: 2px solid black;
-    width: 130px;
-    padding: 5px;
+.logo {
+  border: 2px solid black;
+  width: 130px;
+  padding: 5px;
 }
-.logo h1{
-    font-size: 20px;
-    font-weight: lighter;
+.logo h1 {
+  font-size: 20px;
+  font-weight: lighter;
 }
 .nav-menu {
   display: flex;
@@ -34,22 +33,20 @@ body {
 .nav-menu li {
   list-style: none;
   font-size: 15px;
-
 }
 .nav-menu li a {
   text-decoration: none;
   color: black;
-  
 }
-.nav-menu li:first-child a{
-    color: #EF547A;
+.nav-menu li:first-child a {
+  color: #ef547a;
 }
-.nav-menu a:hover{
-    color:#EF547A ;
+.nav-menu a:hover {
+  color: #ef547a;
 }
-.nav-img img{
-margin-left: 15px;
-cursor: pointer;
+.nav-img img {
+  margin-left: 15px;
+  cursor: pointer;
 }
 
 /* Cart icon with count */
@@ -194,7 +191,7 @@ cursor: pointer;
 }
 
 .sidebar ul li a:hover {
-  color: #EF547A;
+  color: #ef547a;
 }
 
 .close-btn {
@@ -207,7 +204,7 @@ cursor: pointer;
 }
 
 /* Overlay effect behind sidebar */
-.overlay {
+.overlap {
   position: fixed;
   top: 0;
   left: 0;
@@ -218,23 +215,28 @@ cursor: pointer;
   display: none;
 }
 
-.overlay.show {
+.overlap.show {
   display: block;
 }
 
 /* Show hamburger only on mobile */
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
-}
-
-@media(max-width:768px){
-    .nav-menu{
-        display: none;
-    }
-    .nav-container{
-        display: flex;
-        justify-content: space-between;
-    }
+  .nav-menu {
+    display: none;
+    
+  }
+  .navbar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
 }

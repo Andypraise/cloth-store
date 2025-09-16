@@ -3,6 +3,7 @@ import "./PromoVideo.css";
 
 function PromoVideo() {
   return (
+    <div className="promo-video-2">
     <div className="promo-video">
       <video autoPlay loop muted>
         <source
@@ -11,6 +12,7 @@ function PromoVideo() {
         />
         Your browser does not support the video tag.
       </video>
+    </div>
     </div>
   );
 }

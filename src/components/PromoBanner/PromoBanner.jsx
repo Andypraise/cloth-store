@@ -5,7 +5,7 @@ const promos = [
   "🔥 Summer Sale! Get 20% off all T-Shirts",
   "💥 Buy 2 Jeans, Get 1 Free!",
   "🎉 New Jackets Collection Out Now!",
-  "👟 Sneakers Promo: ₦5000 Only!"
+  "👟 Sneakers Promo: ₦5000 Only!",
 ];
 
 function PromoBanner() {
