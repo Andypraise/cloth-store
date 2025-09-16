@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import PromoVideo from "./components/PromoVideo/PromoVideo";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./page/Home/Home";
 import Shop from "./page/Shop/Shop";
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div>
+      <PromoVideo />
       <Navbar addToCart={addToCart} /> {/* Navbar no longer triggers payment */}
       <Home onShopNow={openPayment} /> {/* Only Home triggers modal */}
       {showPayment && (
