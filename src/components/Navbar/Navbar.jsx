@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";  // 👈 import Link
 import "./Navbar.css";
 import Products from "../../data/Products";
 import searchImage from "../../assets/image13.png";
@@ -38,11 +39,11 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="nav-menu">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#shop">SHOP</a></li>
-            <li><a href="#rated">RATED</a></li>
-            <li><a href="#new">NEW ARRIVALS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><Link to="/">HOME</Link></li>
+            <li><Link to="/shop">SHOP</Link></li>
+            <li><Link to="/rated">RATED</Link></li>
+            <li><Link to="/arrival">NEW ARRIVALS</Link></li>
+            <li><Link to="/contact">CONTACT</Link></li> {/* add Contact page later */}
           </ul>
 
           <div className="nav-img">
@@ -92,11 +93,11 @@ function Navbar() {
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={() => setIsOpen(false)}>×</button>
         <ul>
-          <li><a href="#home" onClick={() => setIsOpen(false)}>HOME</a></li>
-          <li><a href="#shop" onClick={() => setIsOpen(false)}>SHOP</a></li>
-          <li><a href="#rated" onClick={() => setIsOpen(false)}>RATED</a></li>
-          <li><a href="#new" onClick={() => setIsOpen(false)}>NEW ARRIVALS</a></li>
-          <li><a href="#contact" onClick={() => setIsOpen(false)}>CONTACT</a></li>
+          <li><Link to="/" onClick={() => setIsOpen(false)}>HOME</Link></li>
+          <li><Link to="/shop" onClick={() => setIsOpen(false)}>SHOP</Link></li>
+          <li><Link to="/rated" onClick={() => setIsOpen(false)}>RATED</Link></li>
+          <li><Link to="/arrival" onClick={() => setIsOpen(false)}>NEW ARRIVALS</Link></li>
+          <li><Link to="/contact" onClick={() => setIsOpen(false)}>CONTACT</Link></li>
         </ul>
       </div>
     </>

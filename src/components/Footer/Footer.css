@@ -38,7 +38,7 @@
 }
 .link{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 35px;
     margin-top: 10px;
 }
@@ -144,6 +144,10 @@ outline: none;
     }
 }
 @media(max-width:545px){
+    .footer-link{
+        text-align: center;
+        gap: 30px;
+    }
     .footer-img img{
         width: 300px;
         height: 200px;
@@ -152,12 +156,15 @@ outline: none;
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
     .link{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        text-align: center;
+        gap: 20px;
         padding: 10px;
     }
     .input-detail{
@@ -178,9 +185,13 @@ outline: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 20px;
+    }
+    .contact{
+text-align: center;
     }
     .input-detail{
         margin-bottom: 30px;
+        
     }
 }

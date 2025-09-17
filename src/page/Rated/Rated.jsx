@@ -30,6 +30,36 @@ function Rated() {
             title="Senator Kalfan Navtive"
             test="&#8358;45,000"
           />
+          <SliderCard
+            url={whiteImage}
+            title="Senator Kalfan Navtive"
+            test="&#8358;45,000"
+          />
+          <SliderCard
+            url={whiteImage}
+            title="Senator Kalfan Navtive"
+            test="&#8358;45,000"
+          />
+          <SliderCard
+            url={whiteImage}
+            title="Senator Kalfan Navtive"
+            test="&#8358;45,000"
+          />
+          <SliderCard
+            url={whiteImage}
+            title="Senator Kalfan Navtive"
+            test="&#8358;45,000"
+          />
+          <SliderCard
+            url={whiteImage}
+            title="Senator Kalfan Navtive"
+            test="&#8358;45,000"
+          />
+          <SliderCard
+            url={whiteImage}
+            title="Senator Kalfan Navtive"
+            test="&#8358;45,000"
+          />
         </div>
       </div>
     </div>

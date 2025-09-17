@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Arrival.css"
 import shortImage from "../../assets/image1-removebg-preview.png"
+import SliderCard from '../../components/SliderCard/SliderCard'
+import wearImage from "../../assets/image17.png"
 function Arrival({onShopNow}) {
   return (
     <div>
@@ -17,7 +19,26 @@ function Arrival({onShopNow}) {
         </div>
        
       </div>
-
+<div className='card-2'>
+  <SliderCard  url={wearImage}
+                title="Men's 2pcs"
+                test="&#8358;40,000"/>
+  <SliderCard  url={wearImage}
+                title="Men's 2pcs"
+                test="&#8358;40,000"/>
+  <SliderCard  url={wearImage}
+                title="Men's 2pcs"
+                test="&#8358;40,000"/>
+  <SliderCard  url={wearImage}
+                title="Men's 2pcs"
+                test="&#8358;40,000"/>
+  <SliderCard  url={wearImage}
+                title="Men's 2pcs"
+                test="&#8358;40,000"/>
+  <SliderCard  url={wearImage}
+                title="Men's 2pcs"
+                test="&#8358;40,000"/>
+</div>
     </div>
   )
 }

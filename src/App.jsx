@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import PromoVideo from "./components/PromoVideo/PromoVideo";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./page/Home/Home";
@@ -9,6 +11,7 @@ import Arrival from "./page/Arrival/Arrival";
 import Payment from "./components/Payment/Payment";
 import ChatBot from "./components/ChatBot/ChatBot";
 import Footer from "./components/Footer/Footer";
+
 function App() {
   const [cart, setCart] = useState([]);
   const [showPayment, setShowPayment] = useState(false);
@@ -22,19 +25,29 @@ function App() {
   };
 
   return (
-    <div>
+    <Router>
       <PromoVideo />
-      <Navbar addToCart={addToCart} /> {/* Navbar no longer triggers payment */}
-      <Home onShopNow={openPayment} /> {/* Only Home triggers modal */}
+      <Navbar addToCart={addToCart} />
+
+      {/* Routes for different pages */}
+      <Routes>
+        <Route
+          path="/"
+          element={<Home onShopNow={openPayment} />}
+        />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/rated" element={<Rated />} />
+        <Route path="/arrival" element={<Arrival onShopNow={openPayment} />} />
+      </Routes>
+
+      {/* Payment modal (shown only when triggered) */}
       {showPayment && (
         <Payment cart={cart} onClose={() => setShowPayment(false)} />
       )}
-      <Shop />
-      <Rated />
-      <Arrival onShopNow={openPayment} />
+
       <ChatBot />
       <Footer />
-    </div>
+    </Router>
   );
 }
 
